@@ -3,12 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Massage Therapy for Solid Gym MAssage" />
+        <meta name="description" content="Massage Therapy for Solid Gym Massage" />
         <meta name="keyowrds" content="massage therapy, lund, massage, sports massage, southsoundmassage" />
 
-        <title>Home | South Sound Massage</title>
+        <title>About | South Sound Massage</title>
 
         <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- ✅ About page CSS (new) -->
+        <link rel="stylesheet" href="assets/css/about.css" />
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
         crossorigin="anonymous">
@@ -23,13 +26,12 @@
 
         <!-- Apple Touch Icon for iOS devices -->
         <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png">
-
     </head>
+
     <body>
         <header>
             <!-- Bootstrap navbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <!--  <a class="navbar-brand" href="index.html">South Sound Massage</a>-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,7 +48,7 @@
                             <a class="nav-link custom-font-size" href="treatments-header.html" aria-label="What types of Treatments">Treatments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom-font-size" href="about.html" aria-label="What types of Treatments">About</a>
+                            <a class="nav-link custom-font-size" href="about.html" aria-label="About South Sound Massage">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link custom-font-size" href="contact.html" aria-label="Sign Up for a massage">Contact</a>
@@ -54,112 +56,286 @@
                     </ul>
                 </div>
             </nav>
+
             <!--<a href="index.html" aria-label="Massage at Solid gym Logo with link to the main page.">-->
                 <h1 id="logo">South Sound Massage</h1>
                 <hr>
             </a>
         </header>
-        <div id="hero-image">
-            <img src="assets/images/movement3.jpg" class="hero-image" alt="movement hero image" />
-        </div>
-        <section>
-            <div id="massage-therapy">
-                <section class="therapy-title">About Jared</section>
-                <hr />
-                <p>
-                    Medical massage therapy. Is a planned treatment with very specific goals. Your treatment will factor your physical condition, injuries and medical history to promote good muscle function, healing, reduce stress,
-                    improve local circulation. We will also introduce exercises that will allow you to build upon your massage.
-                    <br>
-                    In this we focus on three different directions.<br>
-                    Sports Therapy. Occupational Therapy. Rehabilitation Therapy.
-                </p>
-            </div>
-        </section>
-        <section id="divider">
-            <div class="neck-massage-image"></div>
-            <div id="cover-text">
-                <h2>Working together</h2>
-                <div class="additional-info">
-                    <p>We create something that works for you! Medical massage therapy is proven to improve your life.</p>
-                    <br>
-                    <ul>
-                        <li>Swedish Classic Massage</li>
-                        <li>Deep Tissue Massage</li>
-                        <li>Sports Massage</li>
-                        <li>Relaxation Massage</li>
-                        <li>Trigger Point Techniques</li>
-                        <li>PNF/PIR Techniques</li>
-                        <li>Myofascial Release Techniques</li>
-                    </ul>
+
+        <!-- ABOUT PAGE CONTENT (header + footer unchanged) -->
+        <main class="about">
+
+            <!-- HERO / INTRO -->
+            <section class="about-hero">
+                <div class="about-hero__bg" aria-hidden="true"></div>
+
+                <div class="about-hero__content">
+                    <p class="about-kicker">South Sound Massage • Lund</p>
+                    <h2 class="about-title">A calmer nervous system. A stronger body. Better movement.</h2>
+                    <p class="about-subtitle">
+                        I’m Jared — I blend medical + sports massage with mobility work to help you feel real change:
+                        less pain, more range of motion, and recovery that actually sticks.
+                    </p>
+
+                    <div class="about-hero__actions">
+                        <a class="about-btn about-btn--primary" href="contact.html" aria-label="Book a massage">Book a session</a>
+                        <a class="about-btn about-btn--ghost" href="massage-therapy.html" aria-label="Read about massage therapy">What I do</a>
+                    </div>
+
+                    <div class="about-stats" role="list" aria-label="Highlights">
+                        <div class="about-stat" role="listitem">
+                            <span class="about-stat__num">3</span>
+                            <span class="about-stat__label">Focus tracks</span>
+                        </div>
+                        <div class="about-stat" role="listitem">
+                            <span class="about-stat__num">60–90</span>
+                            <span class="about-stat__label">Minute sessions</span>
+                        </div>
+                        <div class="about-stat" role="listitem">
+                            <span class="about-stat__num">1</span>
+                            <span class="about-stat__label">Clear plan</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <div>
-            <section id="treatments-header">
-                Treatments
             </section>
-            <hr>
-        </div>
-        <section id="treatments">
-            <div class="treatments-item">
-                <section class="therapy-title">Sports Therapy</section>
-                <br>
-                <br>
-                <p>
-                    Sports therapy is focused around those of you who want to improve your performance in your sport. 
-                    Specific muscle groups and how they realate to the whole body.
-                </p>
-                <br>
-                <br>
-                <ul>
-                    <li>30min - 400:-</li>
-                    <li>60min - 700:-</li>
-                    <li>90min - 1000:-</li>
-                    <li>Flexibility and custom treatments</li>
-                    <li>Sports/outdoor clothing preferred during massage-</li>
-                </ul>
-                <div class="treatment-images">
-                    <img src="assets/images/275px.jpeg" alt="a person in pain" />
+
+            <!-- SECTION: STORY -->
+            <section class="about-section about-section--story">
+                <div class="about-container">
+                    <div class="about-grid">
+                        <div class="about-card about-card--story">
+                            <h3>My style: direct, calm, and results-driven</h3>
+                            <p>
+                                I don’t do “random massage.” I do targeted treatment with a goal.
+                                We figure out what’s limiting you — pain, stiffness, stress load, overuse —
+                                then we treat it and build something you can maintain.
+                            </p>
+                            <p>
+                                That might mean deep tissue. It might mean myofascial release. It might mean slowing down
+                                and letting your nervous system stop bracing. Most of the time, it’s a smart mix.
+                            </p>
+                            <p class="about-quote">
+                                “The body changes fastest when it feels safe enough to change.”
+                            </p>
+                        </div>
+
+                        <div class="about-card about-card--image">
+                            <img src="assets/images/movement3.jpg" alt="Movement and mobility inspiration image" />
+                            <div class="about-card__overlay">
+                                <p><strong>Core promise:</strong> You’ll leave with a difference you can feel.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="treatments-item">
-                <section class="therapy-title">Occupational Therapy</section>
-                <br>
-                <p>
-                    Occupational Therapy is focused around movements that you continuously do from work that affect your posture, joints and other muscoskeleton function.
-                </p>
-                <br>
-                <ul>
-                    <li>30min - 400:-</li>
-                    <li>60min - 700:-</li>
-                    <li>90min - 1000:-</li>
-                    <li>Flexibility and custom treatments</li>
-                    <li>Sports/outdoor clothing preferred during massage-</li>
-                </ul>
-                <div class="treatment-images">
-                    <img src="assets/images/275pxlowbackpain.jpeg" alt="a person with lower back pain" />
+            </section>
+
+            <!-- ✅ SECTION: ABOUT JARED (ADDED) -->
+            <section class="about-section about-section--jared">
+                <div class="about-container">
+                    <div class="jared">
+                        <div class="jared-image">
+                            <!-- Swap this for a real portrait when ready -->
+                            <img src="assets/images/blckbackgroundJared.jpeg" alt="Portrait of Jared Middle Calf, massage therapist" />
+                        </div>
+
+                        <div class="jared-content">
+                            <p class="about-kicker">About me</p>
+                            <h3>Jared Middle Calf</h3>
+
+                            <p class="jared-intro">
+                                I’m a massage therapist, movement nerd, and problem-solver at heart.
+                                I work best with people who want to understand their bodies — not just silence symptoms.
+                            </p>
+
+                            <p>
+                                My path into massage therapy came from working closely with bodies under load:
+                                long workdays, repetitive strain, sports training, stress, and the quiet buildup of tension
+                                that happens when life doesn’t slow down.
+                            </p>
+
+                            <p>
+                                I’m especially interested in how the <strong>nervous system</strong> and
+                                <strong>movement patterns</strong> shape pain. That’s why my sessions often mix
+                                hands-on treatment with mobility work — helping your body relearn what “normal” feels like.
+                            </p>
+
+                            <p>
+                                Outside the treatment room, I value clarity, consistency, and respecting people’s time.
+                                In sessions, that means listening closely, working deliberately, and never doing more
+                                than your body can actually integrate.
+                            </p>
+
+                            <div class="jared-values">
+                                <div class="jared-value">
+                                    <span>🧠</span>
+                                    <p>Nervous-system aware treatment</p>
+                                </div>
+                                <div class="jared-value">
+                                    <span>👐</span>
+                                    <p>Clear communication & consent</p>
+                                </div>
+                                <div class="jared-value">
+                                    <span>📈</span>
+                                    <p>Progress you can feel and track</p>
+                                </div>
+                            </div>
+
+                            <p class="jared-signoff">
+                                My goal is simple: help you feel more at home in your body —
+                                whether that means moving better, hurting less, or finally relaxing.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="treatments-item">
-                <section class="therapy-title">Rehabilitaion Therapy</section>
-                <br>
-                <p>
-                    Rehabilitation Therapy focuses on recovery from injuries that need extra stretch, flex, blood flow and manipulation to help in the healing process.
-                </p>
-                <br>
-                <ul>
-                    <li>30min - 400:-</li>
-                    <li>60min - 700:-</li>
-                    <li>90min - 1000:-</li>
-                    <li>Flexibility and custom treatments</li>
-                    <li>Sports/outdoor clothing preferred during massage-</li>
-                </ul>
-                <div class="treatment-images">
-                    <img src="assets/images/275pxneckpain.jpeg" alt="a person with neck pain" />
+            </section>
+
+            <!-- SECTION: THE METHOD (cards) -->
+            <section class="about-section">
+                <div class="about-container">
+                    <h3 class="about-heading">The South Sound Method</h3>
+                    <p class="about-lead">
+                        Simple, structured, and tailored to your body — not a template.
+                    </p>
+
+                    <div class="method">
+                        <article class="method-card">
+                            <h4>1) Listen</h4>
+                            <p>Quick check-in: what changed since last time, what matters today, what your week demands.</p>
+                        </article>
+
+                        <article class="method-card">
+                            <h4>2) Release</h4>
+                            <p>Hands-on work to reduce pain and normalize tissue: Swedish classic, deep tissue, trigger points, fascia.</p>
+                        </article>
+
+                        <article class="method-card">
+                            <h4>3) Restore</h4>
+                            <p>Range-of-motion work with PNF / PIR and stretching—so the change actually “holds.”</p>
+                        </article>
+
+                        <article class="method-card">
+                            <h4>4) Repeat</h4>
+                            <p>We track what improves and adjust. Less guessing. More progress.</p>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </section>
-        </section>
+            </section>
+
+            <!-- SECTION: 3 TRACKS (creative split layout) -->
+            <section class="about-section about-section--tracks">
+                <div class="about-container">
+                    <h3 class="about-heading">Choose your track</h3>
+                    <p class="about-lead">Same therapist, different focus depending on your life and your body.</p>
+
+                    <div class="tracks">
+                        <article class="track track--sport">
+                            <h4>Sports Therapy</h4>
+                            <p>Performance, recovery, tissue quality. Great if you train hard or want to move better.</p>
+                            <ul>
+                                <li>Recovery + soreness management</li>
+                                <li>Hips, calves, hamstrings, shoulders</li>
+                                <li>Sports massage + targeted deep work</li>
+                            </ul>
+                        </article>
+
+                        <article class="track track--work">
+                            <h4>Occupational Therapy</h4>
+                            <p>Desk, tools, standing, driving — the repetitive stuff that quietly breaks posture over time.</p>
+                            <ul>
+                                <li>Neck/shoulders + upper back</li>
+                                <li>Forearms, hands, jaw tension</li>
+                                <li>Posture + mobility reset</li>
+                            </ul>
+                        </article>
+
+                        <article class="track track--rehab">
+                            <h4>Rehabilitation Support</h4>
+                            <p>For stiffness and recovery patterns that need patience + structure (not aggression).</p>
+                            <ul>
+                                <li>Range of motion limits</li>
+                                <li>PNF / PIR + stretching</li>
+                                <li>Circulation + tissue healing support</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: “TOOLBELT” (chips) -->
+            <section class="about-section">
+                <div class="about-container">
+                    <h3 class="about-heading">My toolkit</h3>
+                    <p class="about-lead">Tools are just tools — I use what works for your goal.</p>
+
+                    <div class="chips" aria-label="Technique list">
+                        <span class="chip">Swedish Classic</span>
+                        <span class="chip">Deep Tissue</span>
+                        <span class="chip">Sports Massage</span>
+                        <span class="chip">Relaxation</span>
+                        <span class="chip">Trigger Points</span>
+                        <span class="chip">Myofascial Release</span>
+                        <span class="chip">PNF</span>
+                        <span class="chip">PIR</span>
+                        <span class="chip">Therapeutic Stretching</span>
+                        <span class="chip">Mobility Coaching</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: FAQ (accordion-lite without JS) -->
+            <section class="about-section about-section--faq">
+                <div class="about-container">
+                    <h3 class="about-heading">FAQ</h3>
+
+                    <details class="faq">
+                        <summary>Do I need to know which treatment to book?</summary>
+                        <p>Nope. Book the time you want. We decide the style after a quick check-in.</p>
+                    </details>
+
+                    <details class="faq">
+                        <summary>Is it always deep tissue?</summary>
+                        <p>
+                            Not at all. Sometimes deep work is perfect — other times it fights your nervous system.
+                            I choose the level that creates change without leaving you wrecked.
+                        </p>
+                    </details>
+
+                    <details class="faq">
+                        <summary>What should I wear?</summary>
+                        <p>
+                            Wear what’s comfortable. For sports-focused sessions, flexible clothing can help if we do
+                            movement work. Otherwise, we’ll adapt.
+                        </p>
+                    </details>
+
+                    <details class="faq">
+                        <summary>How fast will I notice results?</summary>
+                        <p>
+                            Many clients feel a difference after session one. Long-term patterns usually respond best
+                            with a short series (weekly or every other week) then maintenance.
+                        </p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="about-cta">
+                <div class="about-container about-cta__inner">
+                    <div>
+                        <h3>Let’s build a body that feels better to live in.</h3>
+                        <p>
+                            If you’re dealing with tension, pain, or restricted movement — I’ll help you find the pattern
+                            and change it.
+                        </p>
+                    </div>
+                    <a class="about-btn about-btn--primary" href="contact.html" aria-label="Book a massage">Book now</a>
+                </div>
+            </section>
+
+        </main>
+        <!-- END ABOUT PAGE CONTENT -->
+
         <!-- footer will contain social media links -->
         <footer>
             <ul class="social-network-icons">
@@ -167,11 +343,8 @@
                     <a href="https://www.facebook.com/SouthSoundMassage" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i class="fa-brands fa-facebook-square"></i></a>
                 </li>
                 <li>
-                    <a href="contact.html" target="_blank" rel="noopener" aria-label="Visit our Twitter page"><i class="fa-solid fa-mobile"></i></i></a>
+                    <a href="contact.html" target="_blank" rel="noopener" aria-label="Visit our contact page"><i class="fa-solid fa-mobile"></i></a>
                 </li>
-               <!-- <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page)"><i class="fa-brands fa-instagram-square"></i></a>
-                </li> -->
                 <li>
                     <a href="index.html" aria-label="To the main page."><i class="fa-solid fa-house"></i></a>
                 </li>
@@ -183,19 +356,20 @@
                 </p>
             </div>
         </footer>
+
         <script type="text/javascript" src="assets/JS/app.js"></script>
         <!-- font awesome script -->
         <script src="https://kit.fontawesome.com/cd08493386.js" crossorigin="anonymous"></script>
-        
+
         <!-- Bootstrap JavaScript, jQuery, and Popper.js -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
         integrity="sha384-D9/mcJStnN7VF7vKNV6Tx6R8TFs9kZk5g60Fuj2jvXvw+gtpGfl7mfW8PBBVbPp7" 
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
         crossorigin="anonymous"></script>
-        </body>
+    </body>
 </html>

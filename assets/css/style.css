@@ -784,3 +784,475 @@ input[type="submit"] {
         display: absolut;
     }
 }
+/*about
+
+/* ===========================
+   About Page (assets/css/about.css)
+   Keep header/footer styling in your main style.css
+   =========================== */
+
+.about {
+  font-family: inherit;
+  color: #111;
+}
+
+/* Containers */
+.about-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Hero */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 4rem 0;
+}
+
+.about-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(0,0,0,0.70), rgba(0,0,0,0.25)),
+    url("../images/movement3.jpg") center/cover no-repeat;
+  filter: saturate(1.1);
+  transform: scale(1.02);
+}
+
+.about-hero__content {
+  position: relative;
+  width: min(900px, 92%);
+  color: #fff;
+  text-align: left;
+  padding: 2rem;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.about-kicker {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0 0 0.75rem;
+  opacity: 0.9;
+}
+
+.about-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.about-subtitle {
+  font-size: 1.05rem;
+  max-width: 65ch;
+  margin: 0 0 1.5rem;
+  opacity: 0.95;
+}
+
+.about-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+
+.about-btn:hover { transform: translateY(-1px); opacity: 0.95; }
+
+.about-btn--primary {
+  background: #fff;
+  color: #111;
+}
+
+.about-btn--ghost {
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.about-stat {
+  border-radius: 14px;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.about-stat__num {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.about-stat__label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  opacity: 0.92;
+}
+
+/* Sections */
+.about-section {
+  padding: 4rem 0;
+}
+
+.about-section--story {
+  padding-top: 3.5rem;
+}
+
+.about-section--tracks {
+  background: #f6f6f6;
+}
+
+.about-section--faq {
+  background: #0f0f10;
+  color: #fff;
+}
+
+.about-heading {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem;
+}
+
+.about-lead {
+  margin: 0 0 2rem;
+  max-width: 75ch;
+  opacity: 0.9;
+}
+
+/* Grid story */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.about-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.about-card--story {
+  padding: 1.5rem 1.5rem 1.2rem;
+}
+
+.about-card--story h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 0 0 0.75rem;
+}
+
+.about-card--story p {
+  margin: 0 0 0.85rem;
+  line-height: 1.7;
+}
+
+.about-quote {
+  margin-top: 1.25rem !important;
+  padding-left: 1rem;
+  border-left: 4px solid #111;
+  font-weight: 800;
+}
+
+.about-card--image {
+  position: relative;
+}
+
+.about-card--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-card__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  color: #fff;
+}
+
+/* ===========================
+   About Jared Section (ADDED)
+   =========================== */
+
+.about-section--jared {
+  background: #f9f9f9;
+}
+
+.jared {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.jared-image {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  background: #eaeaea;
+  min-height: 360px; /* gives nice height even with placeholder */
+}
+
+.jared-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.jared-content h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 0.75rem;
+}
+
+.jared-intro {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.jared-content p {
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.jared-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.4rem 0;
+}
+
+.jared-value {
+  background: #fff;
+  border-radius: 16px;
+  padding: 0.9rem;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.jared-value span {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.jared-value p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.jared-signoff {
+  margin-top: 1.2rem;
+  font-weight: 800;
+  border-left: 4px solid #111;
+  padding-left: 0.9rem;
+}
+
+/* Method cards */
+.method {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.method-card {
+  border-radius: 18px;
+  padding: 1.2rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+.method-card h4 {
+  margin: 0 0 0.5rem;
+  font-weight: 900;
+}
+
+.method-card p {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Tracks */
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.track {
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.track h4 {
+  font-weight: 900;
+  margin: 0 0 0.5rem;
+}
+
+.track p {
+  margin: 0 0 0.9rem;
+  opacity: 0.92;
+}
+
+.track ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.8;
+}
+
+.track::before {
+  content: "";
+  position: absolute;
+  inset: -80px -80px auto auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  opacity: 0.12;
+}
+
+.track--sport::before { background: #000; }
+.track--work::before { background: #000; }
+.track--rehab::before { background: #000; }
+
+/* Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+/* FAQ */
+.faq {
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 900;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq p {
+  margin: 0.75rem 0 0;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* CTA */
+.about-cta {
+  padding: 3.5rem 0;
+  background: #fff;
+}
+
+.about-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.about-cta__inner h3 {
+  margin: 0 0 0.4rem;
+  font-weight: 900;
+}
+
+.about-cta__inner p {
+  margin: 0;
+  opacity: 0.9;
+  max-width: 70ch;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jared {
+    grid-template-columns: 1fr;
+  }
+
+  .jared-values {
+    grid-template-columns: 1fr;
+  }
+
+  .method {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tracks {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
