@@ -1,0 +1,361 @@
+/* massage-therapy.css
+   Rem-based typography + hover cards + image placeholders
+   Keep header/footer in style.css
+*/
+
+.mt-page,
+.mt-page * {
+  box-sizing: border-box;
+}
+
+.mt-page {
+  color: #111;
+  overflow-x: clip;
+}
+
+/* Container */
+.mt-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 4vw, 1.5rem);
+}
+
+/* Typography */
+.mt-kicker {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.mt-title {
+  margin-top: 0.7rem;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.mt-subtitle {
+  margin-top: 0.9rem;
+  font-size: clamp(1rem, 2.1vw, 1.125rem);
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.mt-subtitle__note {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* HERO */
+.mt-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.2rem, 4vw, 3.5rem) 0;
+  background: #0f0f10;
+  color: #fff;
+}
+
+.mt-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 420px at 10% 10%, rgba(255,255,255,0.10), transparent 60%),
+    radial-gradient(700px 360px at 80% 30%, rgba(255,255,255,0.08), transparent 55%),
+    linear-gradient(120deg, rgba(0,0,0,0.80), rgba(0,0,0,0.40));
+  z-index: 0;
+}
+
+.mt-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.mt-hero__top {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Buttons */
+.mt-hero__actions {
+  margin-top: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.mt-btn {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  transition: transform 160ms ease, opacity 160ms ease, background 160ms ease;
+  white-space: nowrap;
+}
+
+.mt-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+.mt-btn--primary {
+  background: #fff;
+  color: #111;
+}
+
+.mt-btn--ghost {
+  border: 1px solid rgba(255,255,255,0.65);
+  color: #fff;
+}
+
+/* Badge */
+.mt-badge {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 1rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+.mt-badge img {
+  width: min(220px, 100%);
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.mt-badge p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.mt-badge__small {
+  margin-top: 0.55rem;
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+/* Stats */
+.mt-stats {
+  margin-top: 1.35rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mt-stat {
+  border-radius: 16px;
+  padding: 0.95rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.mt-stat:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.10);
+}
+
+.mt-stat__num {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.mt-stat__label {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+/* SECTIONS */
+.mt-section {
+  padding: 4rem 0;
+}
+
+.mt-section--alt {
+  background: #f6f6f6;
+}
+
+.mt-section__header {
+  margin-bottom: 1.35rem;
+}
+
+.mt-heading {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+  margin: 0;
+}
+
+.mt-lead {
+  margin-top: 0.65rem;
+  max-width: 78ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* Cards */
+.mt-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.mt-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mt-card {
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  padding: 1.35rem;
+  transition: transform 170ms ease, box-shadow 170ms ease;
+}
+
+.mt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.10);
+}
+
+.mt-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.mt-card p {
+  margin-top: 0.85rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.mt-card__cite {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.mt-list {
+  margin-top: 0.85rem;
+  padding-left: 1.1rem;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+/* Image placeholders */
+.mt-image-slot {
+  margin-top: 1.4rem;
+  border-radius: 18px;
+  background: #eaeaea;
+  border: 1px dashed rgba(0,0,0,0.25);
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.mt-image-slot--dark {
+  background: #0f0f10;
+  border: 1px dashed rgba(255,255,255,0.35);
+  color: #fff;
+}
+
+.mt-image-slot__label {
+  font-size: 1rem;
+  font-weight: 800;
+  opacity: 0.85;
+}
+
+/* Callout */
+.mt-callout {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.mt-callout h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.mt-callout p {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* References */
+.mt-section--references {
+  background: #0f0f10;
+  color: #fff;
+}
+
+.mt-references {
+  margin-top: 1.1rem;
+  padding-left: 1.3rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.mt-references li {
+  margin-top: 0.75rem;
+}
+
+.mt-references a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.mt-disclaimer {
+  margin-top: 1rem;
+  opacity: 0.9;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mt-hero__top {
+    grid-template-columns: 1fr;
+  }
+
+  .mt-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .mt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mt-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .mt-section {
+    padding: 2.6rem 0;
+  }
+}

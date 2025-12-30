@@ -1,46 +1,80 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const circle = document.querySelector('.circle');
-    const circleContainer = document.querySelector('.circle-container');
+  const circle = document.querySelector(".circle");
+  const circleContainer = document.querySelector(".circle-container");
 
-    // Function to handle the mouse movement effect
-    function applyMouseMovementEffect(event) {
-        const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight;
+  // If this page doesn't have the floating ball, do nothing (prevents JS errors)
+  if (!circle || !circleContainer) return;
 
-        // Calculate the percentage position of the mouse within the viewport
-        const mouseX = event.clientX / windowWidth;
-        const mouseY = event.clientY / windowHeight;
+  let mouseX = 0.5;
+  let mouseY = 0.5;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let rafId = null;
+  let mouseListenerAttached = false;
 
-        // Define the movement range for the circle
-        const maxX = 20; // Horizontal movement in pixels
-        const maxY = 20; // Vertical movement in pixels
+  const maxX = 18; // px
+  const maxY = 18; // px
+  const ease = 0.08; // smoothing factor
 
-        // Calculate offset based on mouse position
-        const offsetX = (mouseX - 0.5) * maxX;
-        const offsetY = (mouseY - 0.5) * maxY;
+  function onMouseMove(event) {
+    const w = window.innerWidth || 1;
+    const h = window.innerHeight || 1;
 
-        // Apply the transform to the circle
-        circle.style.transform = `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px)`;
+    mouseX = event.clientX / w;
+    mouseY = event.clientY / h;
+
+    targetX = (mouseX - 0.5) * maxX;
+    targetY = (mouseY - 0.5) * maxY;
+  }
+
+  function animate() {
+    // Smoothly approach target
+    currentX += (targetX - currentX) * ease;
+    currentY += (targetY - currentY) * ease;
+
+    // Extra subtle "float" even when idle
+    const t = Date.now() * 0.001;
+    const floatX = Math.sin(t * 0.9) * 1.2;
+    const floatY = Math.cos(t * 0.8) * 1.2;
+
+    circle.style.transform = `translate(${currentX + floatX}px, ${currentY + floatY}px)`;
+
+    rafId = requestAnimationFrame(animate);
+  }
+
+  function start() {
+    if (!rafId) rafId = requestAnimationFrame(animate);
+
+    if (!mouseListenerAttached) {
+      document.addEventListener("mousemove", onMouseMove, { passive: true });
+      mouseListenerAttached = true;
     }
+  }
 
-    // Function to handle screen size and update the circle's behavior
-    function handleResize() {
-        if (window.innerWidth <= 400) {
-            // On small screens (<= 400px):
-            circleContainer.style.display = "none"; // Keep the circle visible
-            circle.style.transform = 'none'; // Reset the circle's transform (stop the mouse effect)
-            console.log("Mobile view - Mouse movement effect disabled.");
-        } else {
-            // On larger screens:
-            circleContainer.style.display = "flex"; // Show the circle container
-            document.addEventListener("mousemove", applyMouseMovementEffect); // Enable mousemove for 3D effect
-            console.log("Desktop view - Mouse movement effect enabled.");
-        }
+  function stop() {
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
     }
+    if (mouseListenerAttached) {
+      document.removeEventListener("mousemove", onMouseMove);
+      mouseListenerAttached = false;
+    }
+    circle.style.transform = "none";
+  }
 
-    // Initialize by checking the screen size when the page loads
-    handleResize();
+  function handleResize() {
+    if (window.innerWidth <= 400) {
+      circleContainer.style.display = "none";
+      stop();
+    } else {
+      circleContainer.style.display = "flex";
+      start();
+    }
+  }
 
-    // Check again if the screen size changes (on window resize)
-    window.addEventListener("resize", handleResize);
+  handleResize();
+  window.addEventListener("resize", handleResize);
 });

@@ -1,0 +1,423 @@
+/* treatments.css
+   Clean, rounded, slightly different vibe than massage-therapy page
+   Uses rem sizing, soft depth, hover motion
+*/
+
+.tr-page,
+.tr-page * { box-sizing: border-box; }
+
+.tr-page {
+  color: #0f0f10;
+  overflow-x: hidden;
+}
+
+/* Container */
+.tr-container{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 4vw, 1.5rem);
+}
+
+/* HERO */
+.tr-hero{
+  position: relative;
+  width: 100%;
+  min-height: clamp(520px, 72vh, 760px);
+  display: grid;
+  place-items: center;
+  padding: clamp(2.25rem, 4vw, 4rem) 0;
+  overflow: hidden;
+}
+
+.tr-hero__bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:#0f0f10;
+}
+
+.tr-hero__content{
+  position: relative;
+  z-index: 2;
+  width: min(980px, 100%);
+  padding: clamp(1.1rem, 3vw, 2rem);
+  border-radius: 1.6rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  box-shadow: 0 1.2rem 3rem rgba(0,0,0,0.35);
+}
+
+.tr-kicker{
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.tr-title{
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.8rem, 4.8vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.tr-subtitle{
+  margin-top: 0.9rem;
+  max-width: 70ch;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+/* Actions */
+.tr-actions{
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tr-btn{
+  display: inline-block;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  transition: transform 160ms ease, opacity 160ms ease, box-shadow 160ms ease;
+  white-space: nowrap;
+}
+
+.tr-btn:hover{
+  transform: translateY(-0.12rem);
+  opacity: 0.96;
+}
+
+.tr-btn--primary{
+  background: #fff;
+  color: #111;
+  box-shadow: 0 0.9rem 2.2rem rgba(0,0,0,0.22);
+}
+
+.tr-btn--ghost{
+  border: 1px solid rgba(255,255,255,0.55);
+  color: #fff;
+}
+
+/* TRUST STRIP (BIGGER LOGOS + SPACE) */
+.tr-trust{
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.tr-trust__kicker{
+  grid-column: 1 / -1;
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.tr-trust__item{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  align-content: start;
+
+  border-radius: 1.6rem;
+  padding: 1.1rem;
+
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.11);
+
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.tr-trust__item:hover{
+  transform: translateY(-0.15rem);
+  box-shadow: 0 1.1rem 2.2rem rgba(0,0,0,0.28);
+  background: rgba(255,255,255,0.09);
+}
+
+/* Give logos stage space */
+.tr-trust__item img{
+  width: 100%;
+  max-height: 7.5rem;
+  object-fit: contain;
+  display: block;
+
+  border-radius: 1.2rem;
+  background: rgba(255,255,255,0.96);
+  padding: 0.85rem;
+
+  box-shadow: 0 0.8rem 1.8rem rgba(0,0,0,0.18);
+}
+
+.tr-trust__text strong{
+  display: block;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.tr-trust__text span{
+  display: block;
+  font-size: 1rem;
+  opacity: 0.92;
+  line-height: 1.35;
+}
+
+.tr-trust__small{
+  margin-top: 0.2rem;
+  opacity: 0.82;
+  font-size: 0.95rem;
+}
+
+.tr-logo-slot{
+  width: 100%;
+  min-height: 7.5rem;
+  border-radius: 1.2rem;
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+
+  color: #111;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 0.8rem 1.8rem rgba(0,0,0,0.18);
+}
+
+/* SECTION */
+.tr-section{
+  padding: 3.5rem 0;
+  background: #fff;
+}
+
+.tr-section__header{
+  margin-bottom: 1.4rem;
+}
+
+.tr-heading{
+  margin: 0;
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  font-weight: 900;
+}
+
+.tr-lead{
+  margin-top: 0.65rem;
+  max-width: 75ch;
+  font-size: clamp(1rem, 2.2vw, 1.05rem);
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* Cards grid */
+.tr-grid{
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.tr-card{
+  border-radius: 1.8rem;
+  padding: 1.35rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 1rem 2.4rem rgba(0,0,0,0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tr-card:hover{
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.4rem 3rem rgba(0,0,0,0.12);
+}
+
+.tr-card::before{
+  content: "";
+  position: absolute;
+  inset: -90px -90px auto auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: #000;
+  opacity: 0.05;
+}
+
+.tr-card__top h3{
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-weight: 900;
+}
+
+.tr-card__tags{
+  margin-top: 0.35rem;
+  font-size: 1rem;
+  opacity: 0.75;
+  font-weight: 700;
+}
+
+.tr-card p{
+  margin-top: 0.9rem;
+  line-height: 1.75;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.tr-list{
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  line-height: 1.85;
+  font-size: 1rem;
+}
+
+.tr-price{
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.tr-price span strong{
+  font-weight: 900;
+}
+
+/* Image box inside card */
+.tr-image{
+  margin-top: 1.1rem;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #f2f2f2;
+  box-shadow: 0 0.8rem 1.8rem rgba(0,0,0,0.08);
+}
+
+.tr-image img{
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+  display: block;
+}
+
+.tr-image__label{
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  background: #fff;
+}
+
+/* CTA */
+.tr-cta{
+  margin-top: 1.6rem;
+  border-radius: 1.8rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 1rem 2.4rem rgba(0,0,0,0.06);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tr-cta h3{
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.tr-cta p{
+  margin: 0.35rem 0 0;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* FLOATING BALL (3D + SHADOW) */
+.circle-container{
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* doesn't block clicks */
+}
+
+.circle{
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+
+  transform: translateZ(0);
+  will-change: transform;
+
+  /* 3D feel */
+  background:
+    radial-gradient(closest-side at 30% 30%, rgba(255,255,255,0.30), rgba(255,255,255,0) 55%),
+    radial-gradient(closest-side at 70% 75%, rgba(0,0,0,0.35), rgba(0,0,0,0) 60%),
+    linear-gradient(145deg, #1c1f2a, #0f1117);
+
+  box-shadow:
+    0 1.3rem 2.8rem rgba(0,0,0,0.35),
+    inset 0 0.25rem 0.65rem rgba(255,255,255,0.18),
+    inset 0 -0.6rem 1.1rem rgba(0,0,0,0.35);
+
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.circle::after{
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07);
+}
+
+.circle__small{
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 0.1rem;
+}
+
+.circle__big{
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 992px){
+  .tr-grid{ grid-template-columns: 1fr; }
+  .tr-trust{ grid-template-columns: 1fr; }
+  .tr-cta{ flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 400px){
+  .circle-container{ display: none; }
+}
