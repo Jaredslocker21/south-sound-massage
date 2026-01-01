@@ -1,0 +1,198 @@
+/* assets/css/form.css */
+
+:root{
+  --ss-bg: #ffffff;
+  --ss-ink: #111827;
+  --ss-muted: rgba(17, 24, 39, 0.72);
+  --ss-border: rgba(17, 24, 39, 0.12);
+  --ss-shadow: 0 18px 45px rgba(0,0,0,0.12);
+  --ss-radius: 18px;
+
+  --ss-primary: #1a237e;
+  --ss-primary-dark: #0f1557;
+}
+
+/* Top image area */
+#form-top-image{
+  width: min(1100px, 96%);
+  margin: 20px auto 18px auto;
+}
+
+#form-top-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+/* Booking form wrapper */
+.ss-form{
+  width: min(900px, 92%);
+  margin: 18px auto 26px auto;
+  padding: 28px 26px;
+  background: var(--ss-bg);
+  border: 1px solid var(--ss-border);
+  border-radius: var(--ss-radius);
+  box-shadow: var(--ss-shadow);
+}
+
+.ss-form__title{
+  margin: 0 0 6px 0;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  letter-spacing: 1px;
+  text-transform: none;
+  color: var(--ss-ink);
+}
+
+.ss-form__lead{
+  margin: 0 0 18px 0;
+  color: var(--ss-muted);
+  font-size: 1.05rem;
+}
+
+/* Fields */
+#ssBookingForm{
+  display: grid;
+  gap: 14px;
+}
+
+#ssBookingForm .form-group{
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+#ssBookingForm label{
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(17,24,39,0.70);
+}
+
+#ssBookingForm input,
+#ssBookingForm textarea{
+  width: 100%;
+  border: 1px solid var(--ss-border);
+  border-radius: 14px;
+  padding: 12px 12px;
+  font-size: 1.05rem;
+  color: var(--ss-ink);
+  background: rgba(255,255,255,0.95);
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#ssBookingForm textarea{
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+#ssBookingForm input:focus,
+#ssBookingForm textarea:focus{
+  border-color: rgba(26,35,126,0.45);
+  box-shadow: 0 0 0 4px rgba(26,35,126,0.12);
+}
+
+/* Button */
+#ssBookingForm button[type="submit"]{
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(180deg, var(--ss-primary) 0%, var(--ss-primary-dark) 100%);
+  cursor: pointer;
+  transition: transform .15s ease, filter .2s ease;
+}
+
+#ssBookingForm button[type="submit"]:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+#ssBookingForm button[type="submit"]:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#ssBookingForm button.is-loading{
+  position: relative;
+}
+
+/* Status */
+.ss-status{
+  margin: 6px 0 0 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(17,24,39,0.06);
+  background: rgba(17,24,39,0.04);
+  color: var(--ss-muted);
+}
+
+.ss-status--success{
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.18);
+  color: rgba(16, 185, 129, 0.95);
+}
+
+.ss-status--error{
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.18);
+  color: rgba(239, 68, 68, 0.95);
+}
+
+.ss-status--info{
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.18);
+  color: rgba(59, 130, 246, 0.95);
+}
+
+/* Contact info card */
+.ss-contact-card{
+  width: min(900px, 92%);
+  margin: 0 auto 40px auto;
+  padding: 22px 22px;
+  background: #fff;
+  border: 1px solid var(--ss-border);
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+}
+
+.ss-contact-card h2{
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  color: var(--ss-ink);
+  text-decoration: none;
+}
+
+.ss-contact-card ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ss-contact-card li{
+  padding: 6px 0;
+  color: var(--ss-muted);
+}
+
+.ss-contact-card a{
+  color: var(--ss-primary);
+  text-decoration: none;
+}
+
+.ss-contact-card a:hover{
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  .ss-form{
+    padding: 20px 16px;
+  }
+}

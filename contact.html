@@ -1,189 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Massage therapy in Lund. Medical and sports massage focused on pain relief, mobility, and recovery." />
-  <meta name="keywords" content="massage therapy, lund, massage, sports massage, medical massage" />
+    <meta
+      name="description"
+      content="Massage therapy in Lund. Medical and sports massage focused on pain relief, mobility, and recovery."
+    />
+    <meta
+      name="keywords"
+      content="massage therapy, lund, massage, sports massage, medical massage"
+    />
 
-  <title>Contact | South Sound Massage</title>
+    <title>Contact | South Sound Massage</title>
 
-  <!-- Main Styles -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/cookie-consent.css" />
+    <!-- Main styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <!-- Bootstrap (NO integrity attributes = no hash failures) -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/favicon.ico">
-</head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/favicon.ico" />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link custom-font-size" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-size" href="massage-therapy.html">Massage Therapy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-size" href="treatments-header.html">Treatments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-size" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-font-size active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link custom-font-size" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-font-size" href="massage-therapy.html">Massage Therapy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-font-size" href="treatments-header.html">Treatments</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-font-size" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-font-size active" href="contact.html">Contact</a>
-        </li>
-      </ul>
+    <!-- Optional top image (keep if you have it) -->
+    <div id="form-top-image">
+      <img
+        src="assets/images/form-images/muscles-orenessresize.jpeg"
+        alt="Man experiencing muscle soreness"
+      />
     </div>
-  </nav>
-</header>
 
-<div id="form-top-image">
-  <img src="assets/images/form-images/muscles-orenessresize.jpeg" alt="Man experiencing muscle soreness">
-</div>
+    <main>
+      <section class="ss-form">
+        <div class="ss-form__header">
+          <h1 class="ss-form__title">Request a booking</h1>
+          <p class="ss-form__lead">
+            Send a quick note and I’ll get back to you.
+          </p>
+        </div>
 
-<section id="form">
-  <div id="form-container">
-    <div class="contact-form">
+        <form id="ssBookingForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
 
-      <section class="therapy-title">Sign Up Here</section>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
 
-      <p>
-        To receive information and a consultation call, please fill in the form below.
-        You may also call directly — every treatment is customized and booked with your therapist.
-      </p>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
 
-      <div class="contact-info">
-        <h4>Contact Information</h4>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button id="ssSubmit" type="submit">Send</button>
+
+          <p id="ssStatus" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- Contact block (simple + clean) -->
+      <section class="ss-contact-card">
+        <h2>Contact information</h2>
         <ul>
           <li><strong>Phone:</strong> <a href="tel:+46762518572">+46 76 251 85 72</a></li>
           <li><strong>Email:</strong> <a href="mailto:se.southsoundmassage@gmail.com">se.southsoundmassage@gmail.com</a></li>
-          <li><strong>Location:</strong> Booked at your location</li>
+          <li><strong>Location:</strong> Lund / Skåne</li>
         </ul>
+        <!-- Google Map (blocked until consent) --> 
+        <div class="mapouter"> <div class="gmap_canvas"> <div class="cookie-blocked"> <h5>Service Area Map</h5> <p>This map is provided by Google. Please accept cookies to load it.</p> <!-- <button type="button" class="btn btn-dark btn-sm js-accept-thirdparty"> --> Accept & Load </button> </div> <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.747484178213!2d13.216029651624044!3d55.72814042468888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653963879205bd9%3A0xee489b9575a5721!2sStiftsv%C3%A4gen%206%2C%20226%2057%20Lund!5e0!3m2!1sen!2sse" width="600" height="300" style="border:0; display:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to South Sound Massage"> </iframe>
+      </section>
+      
+      <!-- Cookie Bar --> 
+      <div id="cookie-bar" class="cookie-bar" role="dialog" aria-live="polite"> <div class="cookie-bar__text"> <strong>Cookies & Privacy</strong> <span> This site only uses cookies for embedded Google services (Forms & Maps). No analytics or marketing. <a href="cookie-policy.html">Cookie Policy</a> </span> </div> <div class="cookie-bar__actions"> <button id="cookie-decline" class="btn btn-outline-secondary btn-sm">Decline</button> <button id="cookie-accept" class="btn btn-dark btn-sm">Accept</button> </div> </div>
+    </main>
+
+    <footer>
+      <ul class="social-network-icons">
+        <li>
+          <a href="https://www.facebook.com/SouthSoundMassage" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+        </li>
+        <li>
+          <a href="index.html" aria-label="Home"><i class="fa-solid fa-house"></i></a>
+        </li>
+      </ul>
+
+      <div id="copyright">
+        <p>© 2022 South Sound Massage</p>
       </div>
+    </footer>
 
-      <!-- Google Form (blocked until consent) -->
-      <div class="google-form-container">
-        <div class="cookie-blocked">
-          <h5>Contact Form</h5>
-          <p>This form is provided by Google. Please accept cookies to load it.</p>
-          <!-- <button type="button" class="btn btn-dark btn-sm js-accept-thirdparty">
-            Accept & Load
-          </button> -->
-        </div>
+    <!-- Scripts -->
+    <script>
+      /* IMPORTANT: paste your Apps Script "exec" URL here */
+      window.SS_SHEETS_ENDPOINT =
+        "https://script.google.com/macros/s/AKfycbxwy2ljQ-1mxJGKUJv-xNfbzbPOwFT59FV2PgPLTseifHJUzibLkfBz5XRyvdqF8n6fbw/exec";
+    </script>
 
-        <iframe
-          data-src="https://docs.google.com/forms/d/e/1FAIpQLSeSFv32a2VfJCi5L5_aAqqkssXjpfhlsrLr-ajiRgf6MOo4oA/viewform?embedded=true"
-          width="640"
-          height="420"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          style="display:none;"
-          title="South Sound Massage contact form">
-        </iframe>
-      </div>
+    <script src="assets/JS/sheets-form.js"></script>
+    <script src="assets/JS/cookie-consent.js"></script>
+    <script src="https://kit.fontawesome.com/cd08493386.js" crossorigin="anonymous"></script>
 
-      <!-- Google Map (blocked until consent) -->
-      <div class="mapouter">
-        <div class="gmap_canvas">
-
-          <div class="cookie-blocked">
-            <h5>Service Area Map</h5>
-            <p>This map is provided by Google. Please accept cookies to load it.</p>
-        <!--    <button type="button" class="btn btn-dark btn-sm js-accept-thirdparty"> -->
-              Accept & Load
-            </button>
-          </div>
-
-          <iframe
-            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.747484178213!2d13.216029651624044!3d55.72814042468888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653963879205bd9%3A0xee489b9575a5721!2sStiftsv%C3%A4gen%206%2C%20226%2057%20Lund!5e0!3m2!1sen!2sse"
-            width="600"
-            height="300"
-            style="border:0; display:none;"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Map to South Sound Massage">
-          </iframe>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<footer>
-  <ul class="social-network-icons">
-    <li>
-      <a href="https://facebook.com" target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook-square"></i>
-      </a>
-    </li>
-    <li>
-      <a href="index.html">
-        <i class="fa-solid fa-house"></i>
-      </a>
-    </li>
-  </ul>
-
-  <div id="copyright">
-    <h3>© 2022 South Sound Massage</h3>
-  </div>
-</footer>
-
-<!-- Cookie Bar -->
-<div id="cookie-bar" class="cookie-bar" role="dialog" aria-live="polite">
-  <div class="cookie-bar__text">
-    <strong>Cookies & Privacy</strong>
-    <span>
-      This site only uses cookies for embedded Google services (Forms & Maps).
-      No analytics or marketing.
-      <a href="cookie-policy.html">Cookie Policy</a>
-    </span>
-  </div>
-  <div class="cookie-bar__actions">
-    <button id="cookie-decline" class="btn btn-outline-secondary btn-sm">Decline</button>
-    <button id="cookie-accept" class="btn btn-dark btn-sm">Accept</button>
-  </div>
-</div>
-
-<!-- Scripts -->
-<script src="assets/JS/cookie-consent.js"></script>
-<script src="https://kit.fontawesome.com/cd08493386.js" crossorigin="anonymous"></script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-        integrity="sha384-D9/mcJStnN7VF7vKNV6Tx6R8TFs9kZk5g60Fuj2jvXvw+gtpGfl7mfW8PBBVbPp7"
-        crossorigin="anonymous"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-</body>
+    <!-- Bootstrap JS (NO integrity) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
 </html>
