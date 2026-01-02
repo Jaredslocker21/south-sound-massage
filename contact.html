@@ -12,6 +12,7 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/form.css" />
+  <link rel="stylesheet" href="assets/css/cookie-consent.css" />
 
   <!-- Bootstrap -->
   <link rel="stylesheet"
@@ -56,7 +57,8 @@
     <h2>Request a booking</h2>
     <p>Send a quick note and I’ll get back to you.</p>
 
-    <form id="ssBookingForm" novalidate>
+    <form id="ssBookingForm">
+
       <!-- Honeypot (bots fill this; humans never see it) -->
       <div class="hp-field" aria-hidden="true">
         <label for="website">Website</label>
@@ -83,7 +85,6 @@
         <textarea id="message" name="message" required maxlength="2000"></textarea>
       </div>
 
-      <!-- Optional extra field you had -->
       <div class="form-group">
         <label for="company">Company (optional)</label>
         <input id="company" name="company" type="text" maxlength="120">
@@ -101,7 +102,41 @@
       <li><strong>Email:</strong> <a href="mailto:se.southsoundmassage@gmail.com">se.southsoundmassage@gmail.com</a></li>
       <li><strong>Location:</strong> Lund / Skåne</li>
     </ul>
+      <!-- Google Map (blocked until consent) -->
+  <section class="mapouter">
+    <div class="gmap_canvas">
+      <div class="cookie-blocked">
+        <h5>Service Area Map</h5>
+        <p>This map is provided by Google. Please accept cookies to load it.</p>
+        <button type="button" class="btn btn-dark btn-sm js-accept-thirdparty">
+          Accept & Load
+        </button>
+      </div>
+
+      <iframe
+        data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.747484178213!2d13.216029651624044!3d55.72814042468888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653963879205bd9%3A0xee489b9575a5721!2sStiftsv%C3%A4gen%206%2C%20226%2057%20Lund!5e0!3m2!1sen!2sse"
+        width="600"
+        height="300"
+        style="border:0; display:none;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map to South Sound Massage">
+      </iframe>
+    </div>
   </section>
+
+  <!-- Google Form (blocked until consent) -->
+  <section class="google-form-container">
+    <div class="cookie-blocked">
+      <h5>Contact Form</h5>
+      <p>This form is provided by Google. Please accept cookies to load it.</p>
+      <button type="button" class="btn btn-dark btn-sm js-accept-thirdparty">
+        Accept & Load
+      </button>
+    </div>
+  </section>
+  </section>
+
 </main>
 
 <footer>
@@ -123,11 +158,28 @@
   </div>
 </footer>
 
+<!-- Cookie Bar -->
+<div id="cookie-bar" class="cookie-bar" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none;">
+  <div class="cookie-bar__text">
+    <strong>Cookies & Privacy</strong>
+    <span>
+      This site only uses cookies for embedded Google services (Forms & Maps).
+      No analytics, no marketing.
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </span>
+  </div>
+  <div class="cookie-bar__actions">
+    <button id="cookie-decline" class="btn btn-outline-secondary btn-sm" type="button">Decline</button>
+    <button id="cookie-accept" class="btn btn-dark btn-sm" type="button">Accept</button>
+  </div>
+</div>
+
 <!-- Scripts -->
 <script src="assets/JS/sheets-form.js"></script>
+<script src="assets/JS/cookie-consent.js"></script>
 <script src="https://kit.fontawesome.com/cd08493386.js" crossorigin="anonymous"></script>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap JS (needed for hamburger/collapse) -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -139,5 +191,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
 </body>
 </html>
